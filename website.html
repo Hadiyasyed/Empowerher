@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome Signup Page</title>
+</head>
+<body>
+    <header>
+        <!-- Welcome image from a public source (Unsplash, Google-indexed CDN) -->
+        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80" alt="Welcome Image" style="width:100%;max-height:250px;object-fit:cover;">
+        <h1>Masai</h1>
+    </header>
+    <main>
+        <p>Welcome to Masai! Please fill out the form below to sign up and join our community.</p>
+        <form>
+            <label for="name"><b>Name:</b></label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email"><b>Email:</b></label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label><b>Gender:</b></label>
+            <input type="radio" id="male" name="gender" value="Male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="Other">
+            <label for="other">Other</label><br><br>
+
+            <label for="age"><b>Age:</b></label>
+            <input type="number" id="age" name="age" min="1" max="120" required><br><br>
+
+            <button type="submit"><b>Signup</b></button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2025 @Masai</p>
+        <a href="https://www.google.com"><b>Click here</b></a>
+    </footer>
+</body>
+</html>
