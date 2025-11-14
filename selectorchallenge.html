@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ENID Box Model Layout</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Georgia', 'Times New Roman', serif;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: #f1ede8;
+      padding: 30px 0;
+      color: #45494a;
+    }
+    .container {
+      width: 700px;
+      margin: 0 auto;
+      background: #f6f2ed;
+      padding: 32px 42px 36px 42px;
+      border-radius: 10px;
+      box-shadow: 0 2px 18px rgba(0,0,0,0.07);
+    }
+    .section {
+      margin-bottom: 32px;
+      padding-bottom: 38px;
+      border-bottom: 2px solid #bebdb6;
+      background: transparent;
+    }
+    /* Special green background section */
+    .section.bg {
+      background: #879987;
+      color: #f5eddd;
+      margin: 0 -42px 32px -42px;
+      padding: 32px 42px 36px 42px;
+      border-bottom: 2px solid #bebdb6;
+    }
+    .subtitle {
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      color: #937e67;
+      margin-bottom: 14px;
+    }
+    .section.bg .subtitle {
+      color: #d7e4db;
+    }
+    .main-title, .section-title {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      font-weight: 400;
+      font-size: 2.3rem;
+      line-height: 1.2;
+      margin-bottom: 4px;
+      color: #45494a;
+    }
+    .main-title b,
+    .section-title b {
+      font-weight: 700;
+      color: #2b453a;
+    }
+    .section.bg .section-title {
+      color: #f5eddd;
+    }
+    .section.bg .section-title b {
+      color: #f0dfc8;
+    }
+    .main-title {
+      font-size: 2.2rem;
+    }
+    /* Adjust for first section */
+    .section:first-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 16px;
+    }
+    /* Make last section have no border */
+    .section:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="section">
+      <div class="subtitle">Everyone needs infinite dreams</div>
+      <div class="main-title"><b>Enid</b> is an amplification studio that<br> builds brands that <b>resound.</b></div>
+    </div>
+    <div class="section bg">
+      <div class="subtitle">Each new idea defined</div>
+      <div class="section-title">
+        We stand firm on <b>our values</b> that <br>sit central to <b>everything we do.</b>
+      </div>
+    </div>
+    <div class="section">
+      <div class="subtitle">Every note is distinct</div>
+      <div class="section-title">We <b>deep-dive</b> into your back<br> catalogue to understand the beat</div>
+    </div>
+  </div>
+</body>
+</html>

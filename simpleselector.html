@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Navigation Bar</title>
+  <style>
+    /* Universal selector for font style */
+    * {
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+
+    /* Grouping selectors for header and footer margin/padding */
+    #header, #footer {
+      margin: 0;
+      padding: 20px 0;
+    }
+
+    /* Header styling using ID selector */
+    #header {
+      background: #11121a;
+      color: #fff;
+    }
+
+    /* Logo styling */
+    .logo {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #24aaff;
+      letter-spacing: 1px;
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    .logo span {
+      color: #fff;
+      font-weight: 400;
+    }
+
+    /* Navigation styling */
+    nav {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 40px;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+    /* Navigation links using class selector */
+    .nav-link {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.1rem;
+      margin: 0 18px;
+      padding: 8px 0 6px 0;
+      transition: color 0.2s;
+      border-bottom: 2px solid transparent;
+    }
+
+    /* Hover effect using pseudo-class */
+    .nav-link:hover {
+      color: #24aaff;
+      border-bottom: 2px solid #24aaff;
+    }
+
+    /* First item styled differently */
+    .nav-link:first-child {
+      color: #24aaff;
+      font-weight: bold;
+      pointer-events: none; /* Make it not clickable if you want to act as a logo */
+    }
+
+    /* Special link style for 'Buy BeTheme' */
+    .btn-link {
+      color: #24aaff;
+      font-weight: bold;
+      margin-left: 30px;
+    }
+
+    /* Optional footer */
+    #footer {
+      background: #11121a;
+      color: #fff;
+      padding: 12px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header id="header">
+    <span class="logo">Be<span>blog</span></span>
+    <nav>
+      <ul>
+        <li><a class="nav-link" href="#">Home</a></li>
+        <li><a class="nav-link" href="#">Web design</a></li>
+        <li><a class="nav-link" href="#">WordPress</a></li>
+        <li><a class="nav-link" href="#">About us</a></li>
+        <li><a class="nav-link" href="#">BeAdvice</a></li>
+        <li><a class="nav-link btn-link" href="#">Buy BeTheme</a></li>
+      </ul>
+    </nav>
+  </header>
+</body>
+</html>
