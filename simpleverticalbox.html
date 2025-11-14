@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Highest & Average CTC Box</title>
+  <style>
+    body {
+      background: #faf9fd;
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    .ctc-container {
+      width: 380px;
+      padding: 32px 0;
+      margin: 40px auto;
+      background: #c6b6ea;
+      border-radius: 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .ctc-title {
+      font-size: 2em;
+      font-style: italic;
+      color: #353257;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 32px;
+      margin-top: 0;
+    }
+    .ctc-box {
+      width: 320px;
+      background: #fff;
+      border-radius: 14px;
+      margin-bottom: 28px;
+      padding: 22px 0;
+      box-shadow: 0 4px 14px rgba(60, 33, 123, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .ctc-box:last-child {
+      margin-bottom: 0;
+    }
+    .ctc-label {
+      font-size: 1.05em;
+      color: #444;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+    .ctc-value {
+      font-size: 2em;
+      color: #222;
+      font-weight: 700;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="ctc-container">
+    <div class="ctc-title"><span style="font-style:italic;font-weight:600;">Highest &<br>Average CTC</span></div>
+    <div class="ctc-box">
+      <div class="ctc-label">Expected Increase in Salary Potential</div>
+      <div class="ctc-value">60%</div>
+    </div>
+    <div class="ctc-box">
+      <div class="ctc-label">Average CTC</div>
+      <div class="ctc-value">₹6.1 LPA</div>
+    </div>
+    <div class="ctc-box">
+      <div class="ctc-label">Highest CTC</div>
+      <div class="ctc-value">₹36 LPA</div>
+    </div>
+    <!-- You can add more ctc-box blocks here if needed -->
+  </div>
+</body>
+</html>
