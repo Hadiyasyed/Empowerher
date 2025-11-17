@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Masai Calculator Layout</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #fff;
+      margin: 0;
+      padding: 30px 0;
+      text-align: center;
+    }
+    .heading {
+      margin: 30px 0 16px 0;
+      font-size: 2.4rem;
+      color: #157765;
+      font-family: 'Georgia', serif;
+    }
+    .calculator {
+      margin: 40px auto 0 auto;
+      width: 340px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 3px 15px rgba(20,30,40,0.07);
+      padding: 38px 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .calculator-display {
+      width: 250px;
+      height: 50px;
+      border-radius: 7px;
+      background: #fafafa;
+      box-shadow: 0 2px 8px rgba(150,150,150,0.09);
+      margin-bottom: 18px;
+      font-size: 1.5rem;
+      color: #333;
+      text-align: right;
+      padding: 12px 18px;
+      border: none;
+      outline: none;
+      pointer-events: none;
+    }
+    .grid {
+      width: 250px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 55px);
+      gap: 11px;
+    }
+    .btn {
+      border: none;
+      border-radius: 7px;
+      font-size: 1.4rem;
+      cursor: pointer;
+      transition: box-shadow .15s, background-color .15s;
+      background: #fff;
+      color: #111;
+      font-family: inherit;
+      box-shadow: 0 1px 4px rgba(120,120,140,0.10);
+    }
+    .btn:hover {
+      box-shadow: 0 2px 10px rgba(60,150,200,0.11);
+      background: #e0e0e0;
+    }
+    .btn-operator {
+      background: #111;
+      color: #fff;
+    }
+    .btn-clear {
+      background: #ed212f;
+      color: #fff;
+      font-weight: 700;
+    }
+    .btn-equals {
+      background: #111;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="heading">Masai Calculator</div>
+  <div class="calculator">
+    <input type="text" class="calculator-display" value="" readonly>
+    <div class="grid">
+      <button class="btn">1</button>
+      <button class="btn">2</button>
+      <button class="btn">3</button>
+      <button class="btn btn-operator">+</button>
+      <button class="btn">4</button>
+      <button class="btn">5</button>
+      <button class="btn">6</button>
+      <button class="btn btn-operator">-</button>
+      <button class="btn">7</button>
+      <button class="btn">8</button>
+      <button class="btn">9</button>
+      <button class="btn btn-operator">x</button>
+      <button class="btn btn-clear">C</button>
+      <button class="btn btn-equals">=</button>
+      <button class="btn btn-operator">/</button>
+      <!-- Last cell (bottom right) is empty for spacing -->
+    </div>
+  </div>
+</body>
+</html>
