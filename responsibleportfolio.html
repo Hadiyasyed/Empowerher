@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #fafafa;
+      margin: 0;
+      padding: 0;
+      color: #223;
+    }
+    header {
+      background: #192350;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 32px;
+      flex-wrap: wrap;
+    }
+    .logo {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+    }
+    nav {
+      display: flex;
+      gap: 28px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: .5px;
+      padding: 6px 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color .15s;
+    }
+    nav a:hover {
+      border-bottom: 2px solid #fbb42c;
+    }
+    .hero {
+      text-align: center;
+      padding: 64px 22px 40px 22px;
+      background: #e6ecfd;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin: 0 0 18px 0;
+      color: #1a2457;
+      font-weight: bold;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 24px;
+      color: #455;
+    }
+    .hero .contact-btn {
+      font-size: 1.13rem;
+      padding: 12px 38px;
+      border: none;
+      border-radius: 20px;
+      background: #fbb42c;
+      color: #132250;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px #2222;
+      transition: background .18s;
+    }
+    .hero .contact-btn:hover {
+      background: #ffd485;
+    }
+    .skills {
+      padding: 48px 16px 38px 16px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .skills h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #213068;
+      font-weight: 700;
+      letter-spacing: .5px;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      justify-content: center;
+      align-items: stretch;
+    }
+    .skill-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px #2232;
+      padding: 32px 12px;
+      text-align: center;
+      font-size: 1.16rem;
+      font-weight: 550;
+      color: #264;
+    }
+    footer {
+      background: #192350;
+      color: #fff;
+      text-align: center;
+      padding: 22px 0;
+      margin-top: 40px;
+    }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 9px;
+    }
+    .social-links a {
+      color: #ffd485;
+      font-size: 1.25rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color .15s;
+    }
+    .social-links a:hover {
+      color: #fbb42c;
+      text-decoration: underline;
+    }
+    /* Tablet: 2-column skills, stacked hero text */
+    @media (max-width: 1023px) {
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .hero h1 { font-size: 2.1rem; }
+      .hero p { font-size: 1.1rem; }
+    }
+    /* Mobile: stacked nav, 1-column skills, simpler hero */
+    @media (max-width: 767px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 14px 18px;
+      }
+      nav {
+        flex-direction: column;
+        gap: 14px;
+        margin-top: 8px;
+      }
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero { padding: 34px 8px 30px 8px; }
+      .hero h1 { font-size: 1.45rem; }
+      .hero p { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">ResponsiveAI</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Skills</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Passionate Web Developer & Problem Solver</h1>
+    <p>Crafting intuitive user interfaces and efficient code using modern web technologies. Welcome to my portfolio!</p>
+    <button class="contact-btn">Contact Me</button>
+  </section>
+  <!-- Skills Section -->
+  <section class="skills">
+    <h2>My Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">HTML & CSS</div>
+      <div class="skill-card">JavaScript</div>
+      <div class="skill-card">React.js</div>
+      <div class="skill-card">Node.js</div>
+      <div class="skill-card">Git & GitHub</div>
+      <div class="skill-card">Responsive Design</div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer>
+    <div>
+      Connect with me:
+      <div class="social-links">
+        <a href="https://github.com/">GitHub</a>
+        <a href="https://linkedin.com/">LinkedIn</a>
+        <a href="https://twitter.com/">Twitter</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
