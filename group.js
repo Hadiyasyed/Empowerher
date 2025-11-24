@@ -18,5 +18,4 @@ const input = [
   "toys", "clothing", "toys", "toys"
 ];
 console.log(countCategories(input));    
-
 console.log(sortedCategories(input));    

@@ -1,4 +1,4 @@
-console.log("Message 1"); 
+console.log("Message 1");
 
 setTimeout(function() {
   console.log("Message 2 after 2 seconds"); 
