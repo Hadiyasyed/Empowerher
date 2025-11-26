@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add List Items</title>
+</head>
+<body>
+    <ul id="item-list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <button id="add-btn">Add Item</button>
+    <script>
+        const ul = document.querySelector('#item-list');
+        const button = document.getElementById('add-btn');
+        button.addEventListener('click', function() {
+            const newLi = document.createElement('li');
+            newLi.textContent = "New Item";
+            const sequence = ul.children.length + 1;
+            if (sequence % 2 === 1) {
+                newLi.style.fontWeight = 'bold';
+                newLi.style.color = 'blue';
+            } else {
+                newLi.style.fontStyle = 'italic';
+                newLi.style.color = 'red';
+            }
+            ul.appendChild(newLi);
+        });
+    </script>
+</body>
+</html>
