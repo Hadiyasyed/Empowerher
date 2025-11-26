@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Div</title>
+</head>
+<body>
+    <input id="color-input" type="text" placeholder="Enter color name">
+    <input id="text-input" type="text" placeholder="Enter text content">
+    <button id="bg-btn">Change Background</button>
+    <button id="text-btn">Update Text</button>
+    <div id="content-div" style="margin-top:20px; padding:15px; border:1px solid #ccc;">
+        Initial text content here.
+    </div>
+    <script>
+        const colorInput = document.getElementById('color-input');
+        const textInput = document.getElementById('text-input');
+        const bgBtn = document.getElementById('bg-btn');
+        const textBtn = document.getElementById('text-btn');
+        const contentDiv = document.getElementById('content-div');
+
+        bgBtn.addEventListener('click', function() {
+            const color = colorInput.value.trim();
+            const testEl = document.createElement('div');
+            testEl.style.color = color;
+            if (testEl.style.color) {
+                contentDiv.style.backgroundColor = color;
+            } else {
+                alert('Invalid color name!');
+            }
+        });
+
+        textBtn.addEventListener('click', function() {
+            const text = textInput.value.trim();
+            if (text) {
+                contentDiv.textContent = text;
+            } else {
+                alert('Please enter some text!');
+            }
+        });
+    </script>
+</body>
+</html>
