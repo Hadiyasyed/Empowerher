@@ -1,0 +1,38 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.controls {
+  margin-bottom: 10px;
+}
+
+#taskInput,
+#searchInput {
+  width: 70%;
+  padding: 5px;
+}
+
+button {
+  padding: 6px 10px;
+  margin-left: 5px;
+}
+
+#taskList {
+  list-style: none;
+  padding: 0;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.task-text.completed {
+  text-decoration: line-through;
+  color: gray;
+}
