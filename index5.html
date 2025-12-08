@@ -3,13 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>Book Store</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style4.css">
 </head>
 <body>
+<form id="addBookForm">
+  <input id="title" placeholder="Title" required>
+  <input id="author" placeholder="Author" required>
+  <input id="price" type="number" placeholder="Price" required>
+  <input id="imageUrl" placeholder="Image URL" required>
+  <button type="submit">Add Book</button>
+</form>
 
-  <!-- your page content here (form, cards container, etc.) -->
+<div id="booksContainer"></div>
 
-  <!-- 1) Firebase config script you got from console -->
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-analytics.js";
@@ -26,10 +32,10 @@
 
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
-    window.firebaseApp = app;  // make app available to script.js
+    window.firebaseApp = app; 
   </script>
 
   <!-- 2) Your own JavaScript file -->
-  <script src="script.js" type="module"></script>
+  <script src="script5.js" type="module"></script>
 </body>
 </html>

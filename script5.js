@@ -13,8 +13,6 @@ const db = getFirestore(app);
 
 const addBookForm = document.getElementById("addBookForm");
 const booksContainer = document.getElementById("booksContainer");
-
-// Listen to realtime book list
 const booksRef = collection(db, "books");
 onSnapshot(booksRef, (snapshot) => {
   booksContainer.innerHTML = "";
@@ -32,28 +30,21 @@ onSnapshot(booksRef, (snapshot) => {
       <button class="view-btn">View Details</button>
     `;
     booksContainer.appendChild(card);
-
-    // Delete
     card.querySelector(".delete-btn").onclick = async () => {
       await deleteDoc(doc(db, "books", d.id));
     };
-
-    // Update author
     card.querySelector(".update-btn").onclick = async () => {
       const newAuthor = prompt("New author name:", book.author);
       if (newAuthor) {
         await updateDoc(doc(db, "books", d.id), { author: newAuthor });
       }
     };
-
-    // View details
     card.querySelector(".view-btn").onclick = () => {
       alert(`Title: ${book.title}\nAuthor: ${book.author}\nPrice: ${book.price}`);
     };
   });
 });
 
-// Add new book
 addBookForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   const title = document.getElementById("title").value.trim();
