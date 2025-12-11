@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Home</title>
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <h1>Welcome to Modular Todo App</h1>
+  <p>Please signup or login to view todos.</p>
+
+  <div id="footer"></div>
+
+  <script type="module">
+    import { navbar } from "./navbar.js";
+    import { footer } from "./footer.js";
+
+    document.getElementById("navbar").innerHTML = navbar();
+    document.getElementById("footer").innerHTML = footer();
+  </script>
+</body>
+</html>
