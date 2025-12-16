@@ -1,12 +1,9 @@
 import "./App.css";
-import FirstComponent from "./FirstComponent.jsx";
+import MainPage from "./MainPage.jsx";
 
 function App() {
-  return (
-    <div>
-      <FirstComponent />
-    </div>
-  );
+  return <MainPage />;
 }
 
 export default App;
+
