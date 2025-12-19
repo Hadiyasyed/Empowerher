@@ -1,5 +1,7 @@
+// src/App.jsx
 import React, { useState } from "react";
 import TodosList from "./TodosList";
+import UserData from "./UserData";
 
 function App() {
   const [showTodos, setShowTodos] = useState(true);
@@ -7,6 +9,8 @@ function App() {
   return (
     <div>
       <h1>Todos App</h1>
+
+      <UserData />
 
       {showTodos && <TodosList />}
 
@@ -18,5 +22,6 @@ function App() {
 }
 
 export default App;
+
 
 
